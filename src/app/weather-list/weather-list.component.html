@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="col-md-4 col-sm-6 col-xs-12">
+        <ul class="city--list">
+            <li *ngFor="let city of cities; let i = index"
+                [class.selected]="city === selectedCity"
+                (click)="onSelectCity(city)">
+                <span class="city_name">{{city}}</span>
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-12">
+        <app-weather-detail [cityName]="selectedCity"></app-weather-detail>
+    </div>
+
+</div>

@@ -1,0 +1,16 @@
+.city--list {
+    padding: 0;
+    li {
+        list-style: none;
+        padding: 10px;
+        border: 1px solid #ccc;
+        margin-bottom: 5px;
+        border-radius: 6px;
+        min-width: 250px;
+        &.selected, &:hover {
+            background: #337ab7;
+            border: 1px solid #337ab7;
+            color: #fff;
+        }
+    }
+}

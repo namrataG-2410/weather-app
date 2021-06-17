@@ -1,0 +1,26 @@
+<a routerLink="/weather-list" class="link clearfix">
+    <i class="glyphicon glyphicon-chevron-left"></i><span>Go back</span>
+</a>
+
+<app-loading *ngIf="isLoading">{{ isLoading }}</app-loading>
+
+<div class="box col-md-6">
+    <div class="title">{{cityName}}</div>
+    <h3>Next 5 days</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col"></th>
+                <th scope="col">Temp</th>
+                <th scope="col">Sea Level</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of filteredWeatherList">
+                <td>{{item['time'] | date: 'mediumDate'}}</td>
+                <td>{{item['temp']}}<sup>&#8451;</sup></td>
+                <td>{{item['seaLevel']}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

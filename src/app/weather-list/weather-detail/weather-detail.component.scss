@@ -1,0 +1,29 @@
+.city {
+    font-size: 16px;
+}
+
+.todayDate {
+    span {
+        font-size: 17px;
+        font-weight: 600;
+    }
+    div {
+        font-size: 13px;
+    }
+}
+
+.temperature {
+    font-size: 20px;
+}
+
+.next-btn {
+    a {
+        color: #1bbaff;
+        font-weight: 600;
+        text-decoration: underline;
+        i {
+            font-size: 12px;
+            margin-left: 5px;
+        }
+    }
+}

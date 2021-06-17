@@ -1,0 +1,24 @@
+<app-loading *ngIf="isLoading">{{ isLoading }}</app-loading>
+
+<ng-container *ngIf="weatherDetails">
+    <app-card>
+        <div class="city">{{weatherDetails?.city}}</div>
+        <div class="todayDate">
+            <span>Today</span>
+            <div>{{today | date:'mediumDate'}}</div>
+        </div>
+        <div class="temperature">{{weatherDetails?.temperature}}<sup>&#8451;</sup></div>
+        <div class="sunriseTime">
+            <span>Sunrise</span>
+            <div>{{weatherDetails?.sunriseTime}}</div>
+        </div>
+        <div class="sunsetTime">
+            <span>Sunset</span>
+            <div>{{weatherDetails?.sunsetTime}}</div>
+        </div>
+        <div class="next-btn">
+            <a (click)="onNavigate()">Next 5 days <i class="glyphicon glyphicon-arrow-right"></i></a>
+        </div>
+    </app-card>
+</ng-container>
+
